@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title class="lblTitle"></title>
+        <%= csrf_meta_tags %>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body onload="changeLang(document.getElementById('ddlLang').value)">
+        <div class="container">
+            <div class="header">
+                <div class="right">
+                    <span class="lang">
+                      <label class="lblLang"></label> 
+                      <select name="ddlLang" id="ddlLang" onchange="changeLang(this.value)">
+                      <% Lang.allowedVals["languages"].each do |key, value|%>
+                          <option value="<%= key %>" <%= selectedLang(key) %>><%= value %></option>
+                      <% end %>
+                      </select>
+                    </span>
+                </div>
+                <h1 class="lblTitle">
+                    
+                </h1>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="content">
+                <%= yield %>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="lblFooter">
+
+            </div>
+        </div>
+    </body>
+</html>

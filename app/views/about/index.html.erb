@@ -1,0 +1,15 @@
+<div class="lblAbout">
+
+</div>
+
+<hr />
+
+<%= form_tag("/sendmail/", method: "post") do %>
+  <%= label_tag(:txtName, "Name", class:"lblName") %>
+  <%= text_field_tag(:txtName) %>
+  <br /><br />
+  <%= label_tag(:txtEmail, "Email", class:"lblEmail") %>
+  <%= text_field_tag(:txtEmail) %>
+  <br /><br />
+  <%= button_tag("Send mail", class:"lblSendEmail") %>
+<% end %>
