@@ -36,7 +36,7 @@ Rails.application.configure do
   :domain         => 'localhost:3000',
   :port           => 25,
   :user_name      => 'teochewthunder@gmail.com',
-  :password       => 'rogertan1977',
+  :password       => 'abc123',
   :authentication => :plain,
   :enable_starttls_auto => true
 }
