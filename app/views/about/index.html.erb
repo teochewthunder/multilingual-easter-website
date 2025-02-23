@@ -5,6 +5,7 @@
 <hr />
 
 <%= form_tag("/sendmail/", method: "post") do %>
+  <%= csrf_meta_tags %>
   <%= label_tag(:txtName, "Name", class:"lblName") %>
   <%= text_field_tag(:txtName) %>
   <br /><br />
