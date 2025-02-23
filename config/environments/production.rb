@@ -77,4 +77,19 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+  # Don't care if the mailer can't send.
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+  :address        => 'smtp.gmail.com',
+  #:domain         => 'mail.google.com',
+  :domain         => 'localhost:3000',
+  :port           => 25,
+  :user_name      => 'teochewthunder@gmail.com',
+  :password       => ENV['SMTP_PASSWORD'],
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 end
