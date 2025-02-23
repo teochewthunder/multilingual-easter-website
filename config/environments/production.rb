@@ -84,8 +84,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
   :address        => 'smtp.gmail.com',
-  #:domain         => 'mail.google.com',
-  :domain         => 'localhost:3000',
+  :domain         => 'mail.google.com',
   :port           => 25,
   :user_name      => 'teochewthunder@gmail.com',
   :password       => ENV['SMTP_PASSWORD'],
