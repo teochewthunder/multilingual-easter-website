@@ -84,8 +84,8 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
   :address        => 'smtp.gmail.com',
-  :domain         => 'mail.google.com',
-  :port           => 25,
+  :domain         => 'multilingual-easter-website.onrender.com',
+  :port           => 587,
   :user_name      => 'teochewthunder@gmail.com',
   :password       => ENV['SMTP_PASSWORD'],
   :authentication => :plain,
